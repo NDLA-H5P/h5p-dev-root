@@ -27,5 +27,5 @@ RUN if [ -d "h5p-timeline" ]; then cd h5p-timeline && npm install && npm run bui
 
 
 FROM kentis123/drupal-h5p:drupal-7
-
+RUN ./vendor/bin/drush vset theme_default seven
 COPY --from=builder /dev-h5p sites/default/files/h5p/development
